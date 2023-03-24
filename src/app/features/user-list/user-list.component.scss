@@ -1,0 +1,35 @@
+:host {
+  --body-margin: 16px;
+  --body-scaling: calc(100% - (var(--body-margin) * 2));
+  display: block;
+
+  margin: 0 var(--body-margin);
+  width: var(--body-scaling);
+
+  @media screen and (min-width: 600px) {
+    --body-margin: 32px;
+  }
+
+  @media screen and (min-width: 905px) {
+    --body-margin: auto;
+    width: 840px;
+  }
+
+  @media screen and (min-width: 1240px) {
+    --body-margin: 200px;
+    width: var(--body-scaling);
+  }
+
+  @media screen and (min-width: 1440px) {
+    --body-margin: auto;
+    width: 1040px;
+  }
+}
+
+.mat-column-actions {
+  width: 10px;
+
+  &.mdc-data-table__cell {
+    text-align: center;
+  }
+}

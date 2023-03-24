@@ -1,0 +1,29 @@
+<mat-sidenav-container>
+  <!-- <mat-sidenav
+    mode="over"
+    [opened]="isSidenavOpen"
+    (closed)="isSidenavOpen = false"
+    >Sidenav content</mat-sidenav
+  > -->
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <!-- <button
+        type="button"
+        mat-icon-button
+        (click)="isSidenavOpen = !isSidenavOpen"
+      >
+        <mat-icon>menu</mat-icon>
+      </button> -->
+      <span>My App</span>
+
+      <a mat-button routerLink="/users">Users</a>
+      <a mat-button routerLink="/add-user">Add User</a>
+
+      <span class="spacer"></span>
+      <button type="button" mat-icon-button (click)="logout()">
+        <mat-icon>logout</mat-icon>
+      </button>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

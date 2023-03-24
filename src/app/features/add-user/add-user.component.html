@@ -1,0 +1,24 @@
+<h1>Add User</h1>
+<mat-card>
+  <mat-card-content>
+    <form #loginForm="ngForm" id="addUser" (ngSubmit)="addUser(loginForm)">
+      <p>
+        <mat-form-field>
+          <mat-label>Username</mat-label>
+          <input matInput placeholder="johndoe" name="username" ngModel required />
+        </mat-form-field>
+      </p>
+    </form>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button
+      mat-flat-button
+      color="primary"
+      form="addUser"
+      type="submit"
+      [disabled]="loginForm.invalid"
+    >
+      Register User
+    </button>
+  </mat-card-actions>
+</mat-card>
