@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { isLogged } from './shared/auth/is-logged.guard';
-import { isNotLogged } from './shared/auth/is-not-logged.guard';
+import { isLogged, isNotLogged } from '@@auth';
 
 const routes: Routes = [
   {

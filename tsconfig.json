@@ -12,6 +12,9 @@
     "paths": {
       "@@models": [
         "dist/models"
+      ],
+      "@@auth": [
+        "dist/auth"
       ]
     },
     "noFallthroughCasesInSwitch": true,
