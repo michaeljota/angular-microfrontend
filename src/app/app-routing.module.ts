@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { isLogged, isNotLogged } from '@@auth';
+import { isLogged, isNotLogged } from '@@services/auth';
 
 const routes: Routes = [
   {

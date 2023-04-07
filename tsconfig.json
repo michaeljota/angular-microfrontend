@@ -18,6 +18,13 @@
       ],
       "@@login": [
         "dist/login-lib"
+      ],
+      "@@services": [
+        "dist/services"
+      ],
+      "@@services/auth": [
+        "dist/services/auth",
+        "dist/services/esm2020/auth/public-api.mjs",
       ]
     },
     "noFallthroughCasesInSwitch": true,
