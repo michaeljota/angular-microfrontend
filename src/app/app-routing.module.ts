@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path: '',
     canMatch: [isNotLogged],
-    loadChildren: () => import('../../projects/login/src/app/feature/login/login.module').then((m) => m.LoginModule),
+    loadChildren: () => import('@@login').then((m) => m.LoginModule),
   },
 ];
 

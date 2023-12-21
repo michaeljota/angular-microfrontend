@@ -15,6 +15,9 @@
       ],
       "@@auth": [
         "dist/auth"
+      ],
+      "@@login": [
+        "dist/login-lib"
       ]
     },
     "noFallthroughCasesInSwitch": true,
