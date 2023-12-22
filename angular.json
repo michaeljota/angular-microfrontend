@@ -188,7 +188,7 @@
 			"prefix": "app",
 			"architect": {
 				"build": {
-					"builder": "@angular-devkit/build-angular:browser",
+					"builder": "ngx-build-plus:browser",
 					"options": {
 						"outputPath": "dist/login",
 						"index": "projects/login/src/index.html",
@@ -205,7 +205,9 @@
 						"styles": [
 							"projects/login/src/styles.scss"
 						],
-						"scripts": []
+						"scripts": [],
+						"extraWebpackConfig": "projects/login/webpack.config.js",
+						"commonChunk": false
 					},
 					"configurations": {
 						"production": {
@@ -221,7 +223,8 @@
 									"maximumError": "4kb"
 								}
 							],
-							"outputHashing": "all"
+							"outputHashing": "all",
+							"extraWebpackConfig": "projects/login/webpack.prod.config.js"
 						},
 						"development": {
 							"buildOptimizer": false,
@@ -235,21 +238,28 @@
 					"defaultConfiguration": "production"
 				},
 				"serve": {
-					"builder": "@angular-devkit/build-angular:dev-server",
+					"builder": "ngx-build-plus:dev-server",
 					"configurations": {
 						"production": {
-							"browserTarget": "login:build:production"
+							"browserTarget": "login:build:production",
+							"extraWebpackConfig": "projects/login/webpack.prod.config.js"
 						},
 						"development": {
 							"browserTarget": "login:build:development"
 						}
 					},
-					"defaultConfiguration": "development"
+					"defaultConfiguration": "development",
+					"options": {
+						"port": 4201,
+						"publicHost": "http://localhost:4201",
+						"extraWebpackConfig": "projects/login/webpack.config.js"
+					}
 				},
 				"extract-i18n": {
-					"builder": "@angular-devkit/build-angular:extract-i18n",
+					"builder": "ngx-build-plus:extract-i18n",
 					"options": {
-						"browserTarget": "login:build"
+						"browserTarget": "login:build",
+						"extraWebpackConfig": "projects/login/webpack.config.js"
 					}
 				},
 				"test": {
