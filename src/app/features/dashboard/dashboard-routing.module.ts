@@ -13,7 +13,7 @@ const routes: Routes = [
       },
       {
         path: 'add-user',
-        loadChildren: () => import('../add-user/add-user.module').then((m) => m.AddUserModule),
+        loadChildren: () => import('../../../../projects/add-user/src/app/feature/add-user/add-user.module').then((m) => m.AddUserModule),
       },
       {
         path: '',
