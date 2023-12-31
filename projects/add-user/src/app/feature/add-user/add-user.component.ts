@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { User } from '@@models';
-import { UsersService } from 'src/app/shared/users/users.service';
+import { UsersService } from '@@shared';
+// import { UsersService } from '../../../../../../src/app/shared/users/users.service';
+
 
 @Component({
   selector: 'app-add-user',

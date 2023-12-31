@@ -18,6 +18,9 @@
       ],
       "@@login": [
         "dist/login-lib"
+      ],
+      "@@shared": [
+        "dist/shared"
       ]
     },
     "noFallthroughCasesInSwitch": true,

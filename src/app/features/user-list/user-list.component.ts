@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { User } from '@@models';
-import { UsersService } from 'src/app/shared/users/users.service';
+import { UsersService } from 'projects/shared/src/lib/users.service';
 
 @Component({
   selector: 'app-user-list',
